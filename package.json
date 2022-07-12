@@ -2,9 +2,10 @@
   "name": "express-playground",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/client/index.html",
   "scripts": {
-    "parcel": "npx parcel src/client/index.html",
+    "start": "parcel",
+    "build": "parcel build",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,mdx,html}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
