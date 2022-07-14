@@ -1,3 +1,10 @@
-const text: string = 'Hello World!';
+const buttonGet = document.querySelector('[data-js=get-button-1]');
+const paragraphGet = document.querySelector('[data-js=get-response-1]');
 
-console.log(text);
+buttonGet?.addEventListener('click', () => {
+  fetch('http://localhost:3000')
+    .then((res) => res.text())
+    .then((data) => {
+      paragraphGet!.textContent = data;
+    });
+});

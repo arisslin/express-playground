@@ -1,3 +1,8 @@
 * {
   box-sizing: border-box;
 }
+
+.get-response-1 {
+  border: 1px solid black;
+  padding: 10px;
+}
