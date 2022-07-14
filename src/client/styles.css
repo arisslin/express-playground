@@ -2,7 +2,31 @@
   box-sizing: border-box;
 }
 
-.get-response-1 {
+.example-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'headline headline'
+    'description response'
+    'button button';
+}
+
+.example-1__headline {
+  grid-area: headline;
+}
+
+.example-1__description {
+  grid-area: description;
+}
+
+.example-1__response {
+  grid-area: response;
   border: 1px solid black;
+  padding: 10px;
+}
+
+.example-1__button {
+  grid-area: button;
   padding: 10px;
 }
