@@ -31,8 +31,17 @@
         Type some text into the text area. Click the button below to send it to
         the server.
       </p>
-      <textarea class="post-example-1__textarea"></textarea>
-      <button class="post-example-1__button">GET text from '/'</button>
+      <form class="post-example-1__form">
+        <label for="post-example-input">Input:</label>
+        <input
+          id="post-example-input"
+          name="post-example-input"
+          data-js="post-text-area"
+        />
+      </form>
+      <button class="post-example-1__button" data-js="post-button-1">
+        GET text from '/'
+      </button>
     </section>
   </body>
 </html>

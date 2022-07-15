@@ -14,6 +14,20 @@
     'button button';
 }
 
+.get-example-1 {
+  grid-template-areas:
+    'headline headline'
+    'description response'
+    'button button';
+}
+
+.post-example-1 {
+  grid-template-areas:
+    'headline headline'
+    'description form'
+    'button button';
+}
+
 .get-example-1__headline,
 .post-example-1__headline {
   grid-area: headline;
@@ -24,11 +38,17 @@
   grid-area: description;
 }
 
-.get-example-1__response,
-.post-example-1__textarea {
+.get-example-1__response {
   grid-area: response;
   border: 1px solid black;
   padding: 10px;
+}
+
+.post-example-1__form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .get-example-1__button,

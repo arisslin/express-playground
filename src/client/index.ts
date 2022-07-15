@@ -8,3 +8,5 @@ buttonGet?.addEventListener('click', () => {
       paragraphGet!.textContent = data;
     });
 });
+
+const buttonPost = document.querySelector('[data-js=post-button-1]');
