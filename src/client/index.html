@@ -14,33 +14,13 @@
   <body>
     <h1>Express Playground Client</h1>
 
-    <section class="get-example-1">
-      <h2 class="get-example-1__headline">GET Example 1</h2>
-      <p class="get-example-1__description">
-        Click on the button below to fetch a text from the server on Route '/'.
+    <section>
+      <h2>POST Example: JSON</h2>
+      <p>
+        Click the button below to send JSON Data from the client to the server!
       </p>
-      <p class="get-example-1__response" data-js="get-response-1"></p>
-      <button class="get-example-1__button" data-js="get-button-1">
-        GET text from '/'
-      </button>
-    </section>
-
-    <section class="post-example-1">
-      <h2 class="post-example-1__headline">POST Example 1</h2>
-      <p class="post-example-1__description">
-        Type some text into the text area. Click the button below to send it to
-        the server.
-      </p>
-      <form class="post-example-1__form">
-        <label for="post-example-input">Input:</label>
-        <input
-          id="post-example-input"
-          name="post-example-input"
-          data-js="post-text-area"
-        />
-      </form>
-      <button class="post-example-1__button" data-js="post-button-1">
-        GET text from '/'
+      <button data-js="post-button-json-example">
+        POST JSON to '/post-json/'
       </button>
     </section>
   </body>

@@ -1,12 +1,23 @@
-const buttonGet = document.querySelector('[data-js=get-button-1]');
-const paragraphGet = document.querySelector('[data-js=get-response-1]');
+const serverUrl = 'http://localhost:3000';
 
-buttonGet?.addEventListener('click', () => {
-  fetch('http://localhost:3000')
+const buttonPostJsonExample: HTMLButtonElement | null = document.querySelector(
+  '[data-js=post-button-json-example]'
+);
+
+buttonPostJsonExample?.addEventListener('click', () => {
+  const data = {
+    test: 'Hello World!',
+  };
+
+  fetch(serverUrl + '/post-json/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
     .then((res) => res.text())
-    .then((data) => {
-      paragraphGet!.textContent = data;
+    .then((text) => {
+      console.log(text);
     });
 });
-
-const buttonPost = document.querySelector('[data-js=post-button-1]');

@@ -6,11 +6,15 @@ const port = 3000;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  console.log('Request from ' + req.url);
+app.use('/post-json/', express.json());
+
+app.post('/post-json/', (req, res) => {
+  console.log('POST Request: ' + req.url);
+  console.log(req.body);
+
   res.type('text');
   res.status(200);
-  res.send('Hello World!');
+  res.send('POST JSON DONE!');
 });
 
 app.listen(port, () => {
