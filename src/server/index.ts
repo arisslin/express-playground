@@ -17,6 +17,17 @@ app.post('/post-json/', (req, res) => {
   res.send('POST JSON DONE!');
 });
 
+app.use('/post-raw/', express.raw());
+
+app.post('/post-raw/', (req, res) => {
+  console.log('POST Request: ' + req.url);
+  console.log(req.body.toString());
+
+  res.type('text');
+  res.status(200);
+  res.send('POST RAW DONE!');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
